@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.27)
 project(chk_lib_core C)
 
-set(src "mem.c" "arena.c")
-set(hdr "mem.h" "arena.h" "types.h")
+set(src "arena.c" "log.c" "mem.c" "print.c")
+set(hdr "arena.h" "log.h" "mem.h" "print.h" "types.h")
 
 list(TRANSFORM src PREPEND "src/")
 list(TRANSFORM hdr PREPEND "include/chk/core/")
