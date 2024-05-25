@@ -3,8 +3,8 @@ project(chk_lib_core C)
 
 add_subdirectory("external")
 
-set(src "arena.c" "log.c" "mem.c" "print.c")
-set(hdr "arena.h" "log.h" "mem.h" "print.h" "types.h")
+set(src "arena.c" "color.c" "log.c" "mem.c" "print.c")
+set(hdr "arena.h" "color.h" "log.h" "mem.h" "print.h" "types.h")
 
 list(TRANSFORM src PREPEND "src/")
 list(TRANSFORM hdr PREPEND "include/chk/core/")
