@@ -14,6 +14,9 @@
         struct {                                                               \
             Type s, t;                                                         \
         };                                                                     \
+        struct {                                                               \
+            Type w, h;                                                         \
+        };                                                                     \
     } V2##Suffix;
 
 #define CHK_DEFINE_V3(Type, Suffix)                                            \
