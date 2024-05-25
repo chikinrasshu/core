@@ -49,8 +49,8 @@
         return result;                                                         \
     }
 
-CHK_V4_DEFINE(R32, f)
-CHK_V4_DEFINE(S32, s)
-CHK_V4_DEFINE(U32, u)
+CHK_V4_DEFINE(R32, _f)
+CHK_V4_DEFINE(S32, _s)
+CHK_V4_DEFINE(U32, _u)
 
 #undef CHK_V4_DEFINE

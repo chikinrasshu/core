@@ -45,21 +45,21 @@
         };                                                                     \
     } V4##Suffix;
 
-CHK_DEFINE_V2(R32, f)
-CHK_DEFINE_V2(S32, s)
-CHK_DEFINE_V2(U32, u)
+CHK_DEFINE_V2(R32, _f)
+CHK_DEFINE_V2(S32, _s)
+CHK_DEFINE_V2(U32, _u)
 
-CHK_DEFINE_V3(R32, f)
-CHK_DEFINE_V3(S32, s)
-CHK_DEFINE_V3(U32, u)
+CHK_DEFINE_V3(R32, _f)
+CHK_DEFINE_V3(S32, _s)
+CHK_DEFINE_V3(U32, _u)
 
-CHK_DEFINE_V4(R32, f)
-CHK_DEFINE_V4(S32, s)
-CHK_DEFINE_V4(U32, u)
+CHK_DEFINE_V4(R32, _f)
+CHK_DEFINE_V4(S32, _s)
+CHK_DEFINE_V4(U32, _u)
 
-typedef V2f V2;
-typedef V3f V3;
-typedef V4f V4;
+typedef V2_f V2;
+typedef V3_f V3;
+typedef V4_f V4;
 
 #undef CHK_DEFINE_V2
 #undef CHK_DEFINE_V3

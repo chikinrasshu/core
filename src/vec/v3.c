@@ -57,8 +57,8 @@
         return result;                                                         \
     }
 
-CHK_V3_DEFINE(R32, f)
-CHK_V3_DEFINE(S32, s)
-CHK_V3_DEFINE(U32, u)
+CHK_V3_DEFINE(R32, _f)
+CHK_V3_DEFINE(S32, _s)
+CHK_V3_DEFINE(U32, _u)
 
 #undef CHK_V3_DEFINE
