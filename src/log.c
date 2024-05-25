@@ -1,6 +1,8 @@
 #include <chk/core/log.h>
 #include <chk/core/print.h>
 
+#include <cwalk.h>
+
 void chk_impl_log_header(LogSev sev, const char* sender, const char* file,
                          U32 line, const char* func) {
     const char* sev_name = "Unknown";
@@ -10,7 +12,15 @@ void chk_impl_log_header(LogSev sev, const char* sender, const char* file,
         case LogSev_Error: sev_name = "Error"; break;
     }
 
-    chk_print_f("[%s] [%s] [%s:%d:%s] ", sev_name, sender, file, line, func);
+    const char*        fname;
+    struct cwk_segment seg;
+    if (!cwk_path_get_last_segment(file, &seg)) {
+        fname = file;
+    } else {
+        fname = seg.begin;
+    }
+
+    chk_print_f("[%s] [%s] [%s:%d:%s] ", sev_name, sender, fname, line, func);
 }
 
 void chk_impl_log(LogSev sev, const char* sender, const char* msg,

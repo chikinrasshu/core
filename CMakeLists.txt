@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.27)
 project(chk_lib_core C)
 
+add_subdirectory("external")
+
 set(src "arena.c" "log.c" "mem.c" "print.c")
 set(hdr "arena.h" "log.h" "mem.h" "print.h" "types.h")
 
@@ -12,3 +14,5 @@ add_library(chk::core ALIAS chk_core)
 
 target_compile_features(chk_core PUBLIC c_std_11)
 target_include_directories(chk_core PUBLIC "include")
+
+target_link_libraries(chk_core PRIVATE cwalk::cwalk)
